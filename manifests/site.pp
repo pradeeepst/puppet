@@ -1,15 +1,15 @@
 node default {
 class { 'apache': }
 apache::vhost { 'redirect.example.com non-ssl':
-  servername      => '54.252.168.214',
+  servername      => 'stan.pradeepst.com',
   port            => '80',
   docroot         => '/var/www/redirect',
   redirect_status => 'permanent',
-  redirect_dest   => 'https://54.252.168.214/'
+  redirect_dest   => 'https://stan.pradeepst.com'
 }
 
 apache::vhost { 'redirect.example.com 8080':
-  servername => '54.252.168.214',
+  servername => 'stan.pradeepst.com',
   port       => '8080',
   docroot    => '/var/www/redirect',
 }
